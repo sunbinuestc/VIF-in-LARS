@@ -143,6 +143,7 @@
 
 基于深度学习的可见光和红外图像融合具有巨大的应用潜力，以下未来研究方向将进一步推动图像融合方法的探索，并加速其在低空遥感场景中的落地应用：1）高效实时的图像融合；2）统一全面的客观评价；3）任务协同的图像融合。
 ## 代码使用方法
+见[metric calculation](https://github.com/sunbinuestc/VIF-metrics-analysis/tree/fec9d88fe85de35246e82eb0d4dc95c535b9d0f4/code/Python/metric%20calculation)
 
 ## 引用信息
 孙彬, 游航, 李文博, 刘祥瑞, 马佳义. 双光载荷图像融合及其在低空遥感中的应用[J/OL]. 航空学报, 1-23[2025-04-09]. http://kns.cnki.net/kcms/detail/11.1929.V.20241227.1548.002.html.
