@@ -356,7 +356,7 @@
 
 实验部分选择12种代表性图像融合算法从定性、融合质量以及运行效率三方面全面评估算法的性能。其中基于自编码器（AE）子类，选择[DenseFuse](https://ieeexplore.ieee.org/document/8580578)和[DIDFuse](https://www.ijcai.org/proceedings/2020/135)分别对应单编码器和多编码器的融合方法，融合策略均选择在原文中表现优异的加法融合；基于卷积神经网络（CNN）子类，选择[U2Fusion](https://ieeexplore.ieee.org/document/9151265)、[STDFusionNet]()、[SeAFusion](https://www.sciencedirect.com/science/article/abs/pii/S1566253521002542)和[DeFusion](https://dl.acm.org/doi/abs/10.1007/978-3-031-19797-0_41)分别对应无监督、手工标注、任务驱动和自监督的方法；基于Transformer子类，选择[SwinFusion](https://ieeexplore.ieee.org/document/9812535)和[SwinFuse](https://ieeexplore.ieee.org/document/9832006)分别对应ViT和HVT的方法；基于生成对抗网络（GAN）的子类，选择[FusionGAN](https://www.sciencedirect.com/science/article/abs/pii/S1566253518301143)和[GANFM](https://ieeexplore.ieee.org/abstract/document/9573457)分别对应单判别器和多判别器的方法；基于扩散模型（Diffusion）的子类，选择[Diff-IF](https://www.sciencedirect.com/science/article/abs/pii/S1566253524002288)和[DDFM](https://arxiv.org/abs/2303.06840)分别对应以融合图像为先验和以模态图像为先验的方法。需要说明的是，由于基于变分自编码器（VAE）的图像融合方法较少且未公开预训练模型，因此对比实验中未包含该类别的算法。
 
-用于验证方法的测试集选择[VTUAV](https://arxiv.org/abs/2204.04120)、[Fireman](https://zenodo.org/records/12773422)、[BOOSS](https://www.mdpi.com/2072-4292/13/21/4357)数据集，对应目标监测、灾情预警和专业巡检三类场景，图像尺寸分别为640×360,640×512和512×512。实验中从这些数据集中各随机选取50对图像进行定量评估。所有的源图像在空间上严格对齐。Fireman数据集中伪彩色红外图像，先经过YCbCr转换保留Y通道，这一操作不影响红外图像中的强度信息。所有可见光图像在融合前转换到YCbCr颜色空间，保留Y通道红外图像进行融合，融合后通过逆变换转为RGB融合结果。
+用于验证方法的测试集选择VTUAV、Fireman、BOOSS数据集，对应目标监测、灾情预警和专业巡检三类场景，图像尺寸分别为640×360，640×512和512×512。实验中从这些数据集中各随机选取50对图像进行定量评估。所有的源图像在空间上严格对齐。Fireman数据集中伪彩色红外图像，先经过YCbCr转换保留Y通道，这一操作不影响红外图像中的强度信息。所有可见光图像在融合前转换到YCbCr颜色空间，保留Y通道红外图像进行融合，融合后通过逆变换转为RGB融合结果。
 
 
 <div align=center>表4 融合图像定量比较结果</div>
