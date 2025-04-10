@@ -663,6 +663,103 @@
 </table>
 注：<b>加粗</b>表示最优结果，<ins>下划线</ins>表示次优结果</div>
 
+<div align=center>表5 融合效率分析表</div>
+<table align=center>
+  <tr>
+    <th>方法</th>
+    <th>参数量/10⁶</th>
+    <th>运行时间/VTUAV</th>
+    <th>运行时间/BOOSS</th>
+    <th>运行时间/Fireman</th>
+  </tr>
+  <tr>
+    <td>DenseFuse</td>
+    <td>0.2226</td>
+    <td>0.1981±0.0219</td>
+    <td>0.2087±0.0228</td>
+    <td>0.2068±0.0224</td>
+  </tr>
+  <tr>
+    <td>DIDFuse</td>
+    <td>0.2609</td>
+    <td>0.0706±0.0020</td>
+    <td>0.0784±0.0032</td>
+    <td>0.0919±0.0031</td>
+  </tr>
+  <tr>
+    <td>U2Fusion</td>
+    <td>0.6592</td>
+    <td>0.0514±0.0028</td>
+    <td>0.0592±0.0032</td>
+    <td>0.0737±0.0035</td>
+  </tr>
+  <tr>
+    <td>DeFusion</td>
+    <td>7.8745</td>
+    <td>0.3298±0.0224</td>
+    <td>0.4311±0.0281</td>
+    <td>0.4008±0.0591</td>
+  </tr>
+  <tr>
+    <td>STDFusion-Net</td>
+    <td>0.2825</td>
+    <td><ins>0.0351±0.0011</ins></td>
+    <td><ins>0.0395±0.0014</ins></td>
+    <td><ins>0.0492±0.0015</ins></td>
+  </tr>
+  <tr>
+    <td>SeAFusion</td>
+    <td>0.1669</td>
+    <td><strong>0.0028±0.0001</strong></td>
+    <td><strong>0.0030±0.0004</strong></td>
+    <td><strong>0.0036±0.0003</strong></td>
+  </tr>
+  <tr>
+    <td>SwinFuse</td>
+    <td>2.0212</td>
+    <td>0.3081±0.0336</td>
+    <td>0.4059±0.0068</td>
+    <td>0.5405±0.0557</td>
+  </tr>
+  <tr>
+    <td>SwinFusion</td>
+    <td>0.9737</td>
+    <td>1.8497±0.0778</td>
+    <td>2.0115±0.0625</td>
+    <td>2.7393±0.1065</td>
+  </tr>
+  <tr>
+    <td>FusionGAN</td>
+    <td>1.3264</td>
+    <td>0.0528±0.0049</td>
+    <td>0.0616±0.0055</td>
+    <td>0.0773±0.0052</td>
+  </tr>
+  <tr>
+    <td>GAN-FM</td>
+    <td>15.0754</td>
+    <td>0.5588±0.0356</td>
+    <td>0.5370±0.0307</td>
+    <td>0.5736±0.0341</td>
+  </tr>
+  <tr>
+    <td>Diff-IF</td>
+    <td>23.713</td>
+    <td>1.2199±0.0045</td>
+    <td>1.3794±0.0057</td>
+    <td>1.7217±0.0088</td>
+  </tr>
+  <tr>
+    <td>DDFM</td>
+    <td>552.663</td>
+    <td>18.8247±0.5315</td>
+    <td>22.5692±0.5867</td>
+    <td>29.3542±0.3868</td>
+  </tr>
+</table>
+
+注：<strong>加粗</strong>表示最优结果 <ins>下划线</ins>表示次优结果
+
 ## 基于深度学习的图像融合实验对比
 
 实验部分选择12种代表性图像融合算法从定性、融合质量以及运行效率三方面全面评估算法的性能。其中基于自编码器子类，选择[DenseFuse](https://ieeexplore.ieee.org/document/8580578)和[DIDFuse](https://www.ijcai.org/proceedings/2020/135)分别对应单编码器和多编码器的融合方法，融合策略均选择在原文中表现优异的加法融合；基于卷积神经网络子类，选择[U2Fusion](https://ieeexplore.ieee.org/document/9151265)、[STDFusionNet]()、[SeAFusion](https://www.sciencedirect.com/science/article/abs/pii/S1566253521002542)和[DeFusion](https://dl.acm.org/doi/abs/10.1007/978-3-031-19797-0_41)分别对应无监督、手工标注、任务驱动和自监督的方法；基于Transformer子类，选择[SwinFusion](https://ieeexplore.ieee.org/document/9812535)和[SwinFuse](https://ieeexplore.ieee.org/document/9832006)分别对应ViT和HVT的方法；基于生成对抗网络的子类，选择[FusionGAN](https://www.sciencedirect.com/science/article/abs/pii/S1566253518301143)和[GANFM](https://ieeexplore.ieee.org/abstract/document/9573457)分别对应单判别器和多判别器的方法；基于扩散模型的子类，选择[Diff-IF](https://www.sciencedirect.com/science/article/abs/pii/S1566253524002288)和[DDFM](https://arxiv.org/abs/2303.06840)分别对应以融合图像为先验和以模态图像为先验的方法。需要说明的是，由于基于变分自编码器的图像融合方法较少且未公开预训练模型，因此对比实验中未包含该类别的算法。
