@@ -303,42 +303,51 @@
     <td>低</td>
   </tr>
 </table>
+
 <div align=center>表3 生成式深度学习图像融合方法对比</div>
 <table align=center>
   <tr>
-    <th>判别式融合</th>
-    <th>特征表示</th>
+    <th>生成式融合</th>
+    <th>生成原理</th>
+    <th>估计方式</th>
     <th>融合策略</th>
-    <th>监督方式</th>
+    <th>生成质量</th>
     <th>训练方式</th>
     <th>复杂度</th>
+    <th>训练稳定性</th>
     <th>效率</th>
   </tr>
   <tr>
-    <td>自编码器</td>
-    <td>特征降维</td>
-    <td>人工为主</td>
-    <td>自监督</td>
-    <td>非端到端为主</td>
+    <td>VAE</td>
+    <td>变分推理</td>
+    <td>显示</td>
+    <td>学习</td>
     <td>低</td>
+    <td>端到端</td>
+    <td>高</td>
+    <td>稳定</td>
     <td>高</td>
   </tr>
   <tr>
-    <td>卷积神经网络</td>
-    <td>局部特征</td>
-    <td>人工/学习</td>
-    <td>无监督/自监督/有监督</td>
-    <td>非端到端/端到端</td>
+    <td>GAN</td>
+    <td>对抗训练</td>
+    <td>隐式</td>
+    <td>学习</td>
+    <td>高</td>
+    <td>端到端</td>
     <td>中</td>
+    <td>不稳定</td>
     <td>中</td>
   </tr>
   <tr>
-    <td>Transformer</td>
-    <td>全局特征</td>
+    <td>Diffusion</td>
+    <td>随机过程</td>
+    <td>隐式</td>
     <td>人工/学习</td>
-    <td>无监督/自监督/有监督</td>
-    <td>非端到端/端到端</td>
     <td>高</td>
+    <td>端到端/非端到端</td>
+    <td>低</td>
+    <td>较稳定</td>
     <td>低</td>
   </tr>
 </table>
