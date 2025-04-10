@@ -262,7 +262,7 @@
 
 生成式方法显式或隐式地学习数据的联合概率分布，通过在分布间构建损失函数建立输入和输出之间的关系生成新的融合结果。这类方法可以捕捉数据的分布规律具备生成能力，能够应对模态缺失的融合问题。但是计算过程较为复杂耗时。
 
-<div align=center><img src="assets/1.png"></div>
+<div align=center><img src="assets/1.jpg"></div>
 <div align=center>图1 基于深度学习的图像融合方法分类</div>
 <div align=center>表2 判别式深度学习图像融合方法对比</div>
 <table align=center>
