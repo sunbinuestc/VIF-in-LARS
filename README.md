@@ -3,7 +3,7 @@
 ## 摘要
 双光载荷图像融合在目标监测、灾情预警及专业巡检等低空遥感领域有着广泛的应用前景。首先针对应用场景，统计并归纳了任务载荷双光图像数据集，为相关研究及应用提供数据支持。其次，跟踪深度学习领域的最新技术，系统总结基于深度学习的双光载荷图像融合方法，将现有方法归纳为生成式和判别式两类，并详细梳理代表性的方法及特点。再次，从定性分析、融合质量及运行效率三个方面，对不同类型的图像融合方法在不同数据集上的融合效果进行深入的实验对比分析。最后，探讨图像融合技术在低空遥感应用中面临的挑战问题，为相关领域的研究提供参考。
 ## 低空遥感双光图像数据集
-表1统计了以低空飞行器为平台，搭载双光载荷的各类应用场景数据集，包括但不限于目标监测、灾情预警、专业巡检等。其中所有数据集均包含可见光和灰度/伪彩色红外图像对或视频对，配准后的双光图像对可支持像素级图像融合方法的研究和验证。其中，图像类型1表示可见光和灰度红外图像，2表示可见光和伪彩色红外图像。
+表1统计了以低空飞行器为平台，搭载双光载荷的各类应用场景数据集，包括但不限于目标监测、灾情预警、专业巡检等。其中所有数据集均包含可见光和灰度/伪彩色红外图像对或视频对，配准后的双光图像对可支持像素级图像融合方法的研究和验证。
 
 **目标监测**：低空飞行器在执行目标监测任务时，常常面临恶劣天气、光照变化等挑战性问题。红外与可见光图像融合可以为警务及管理人员提供可视化的融合结果，清晰呈现场景及重点目标信息，用于交通、安检等昼夜监测，提升监测系统的实用性和效率。
 
@@ -318,7 +318,7 @@
     <th>效率</th>
   </tr>
   <tr>
-    <td>VAE</td>
+    <td>变分自编码器</td>
     <td>变分推理</td>
     <td>显示</td>
     <td>学习</td>
@@ -329,7 +329,7 @@
     <td>高</td>
   </tr>
   <tr>
-    <td>GAN</td>
+    <td>生成对抗网络</td>
     <td>对抗训练</td>
     <td>隐式</td>
     <td>学习</td>
@@ -340,7 +340,7 @@
     <td>中</td>
   </tr>
   <tr>
-    <td>Diffusion</td>
+    <td>扩散模型</td>
     <td>随机过程</td>
     <td>隐式</td>
     <td>人工/学习</td>
@@ -351,6 +351,13 @@
     <td>低</td>
   </tr>
 </table>
+
+## 基于深度学习的图像融合实验对比
+
+实验部分选择12种代表性图像融合算法从定性、融合质量以及运行效率三方面全面评估算法的性能。其中基于自编码器（AE）子类，选择[DenseFuse](https://ieeexplore.ieee.org/document/8580578)和[DIDFuse](https://www.ijcai.org/proceedings/2020/135)分别对应单编码器和多编码器的融合方法，融合策略均选择在原文中表现优异的加法融合；基于卷积神经网络（CNN）子类，选择[U2Fusion](https://ieeexplore.ieee.org/document/9151265)、[STDFusionNet]()、[SeAFusion](https://www.sciencedirect.com/science/article/abs/pii/S1566253521002542)和[DeFusion](https://dl.acm.org/doi/abs/10.1007/978-3-031-19797-0_41)分别对应无监督、手工标注、任务驱动和自监督的方法；基于Transformer子类，选择[SwinFusion](https://ieeexplore.ieee.org/document/9812535)和[SwinFuse](https://ieeexplore.ieee.org/document/9832006)分别对应ViT和HVT的方法；基于生成对抗网络（GAN）的子类，选择[FusionGAN](https://www.sciencedirect.com/science/article/abs/pii/S1566253518301143)和[GANFM](https://ieeexplore.ieee.org/abstract/document/9573457)分别对应单判别器和多判别器的方法；基于扩散模型（Diffusion）的子类，选择[Diff-IF](https://www.sciencedirect.com/science/article/abs/pii/S1566253524002288)和[DDFM](https://arxiv.org/abs/2303.06840)分别对应以融合图像为先验和以模态图像为先验的方法。需要说明的是，由于基于变分自编码器（VAE）的图像融合方法较少且未公开预训练模型，因此对比实验中未包含该类别的算法。
+
+用于验证方法的测试集选择[VTUAV](https://arxiv.org/abs/2204.04120)、[Fireman](https://zenodo.org/records/12773422)、[BOOSS](https://www.mdpi.com/2072-4292/13/21/4357)数据集，对应目标监测、灾情预警和专业巡检三类场景，图像尺寸分别为640×360,640×512和512×512。实验中从这些数据集中各随机选取50对图像进行定量评估。所有的源图像在空间上严格对齐。Fireman数据集中伪彩色红外图像，先经过YCbCr转换保留Y通道，这一操作不影响红外图像中的强度信息。所有可见光图像在融合前转换到YCbCr颜色空间，保留Y通道红外图像进行融合，融合后通过逆变换转为RGB融合结果。
+
 
 <div align=center>表4 融合图像定量比较结果</div>
 <table align=center>
@@ -439,7 +446,7 @@
     <td>0.865</td>
   </tr>
   <tr>
-    <td>GAN - FM</td>
+    <td>GAN-FM</td>
     <td>GAN</td>
     <td><b>5.517</b></td>
     <td>0.669</td>
@@ -447,7 +454,7 @@
     <td>1.083</td>
   </tr>
   <tr>
-    <td>Diff - IF</td>
+    <td>Diff-IF</td>
     <td>Diffusion</td>
     <td>4.621</td>
     <td>0.646</td>
@@ -538,7 +545,7 @@
     <td>0.788</td>
   </tr>
   <tr>
-    <td>GAN - FM</td>
+    <td>GAN-FM</td>
     <td>GAN</td>
     <td>2.933</td>
     <td>0.536</td>
@@ -546,7 +553,7 @@
     <td>1.060</td>
   </tr>
   <tr>
-    <td>Diff - IF</td>
+    <td>Diff-IF</td>
     <td>Diffusion</td>
     <td>2.688</td>
     <td>0.533</td>
@@ -637,7 +644,7 @@
     <td>0.509</td>
   </tr>
   <tr>
-    <td>GAN - FM</td>
+    <td>GAN-FM</td>
     <td>GAN</td>
     <td>3.685</td>
     <td>0.464</td>
@@ -645,7 +652,7 @@
     <td><b>0.823</b></td>
   </tr>
   <tr>
-    <td><u>Diff - IF</u></td>
+    <td><u>Diff-IF</u></td>
     <td>Diffusion</td>
     <td>3.734</td>
     <td>0.507</td>
@@ -758,13 +765,7 @@
   </tr>
 </table>
 
-注：<strong>加粗</strong>表示最优结果 <ins>下划线</ins>表示次优结果
-
-## 基于深度学习的图像融合实验对比
-
-实验部分选择12种代表性图像融合算法从定性、融合质量以及运行效率三方面全面评估算法的性能。其中基于自编码器子类，选择[DenseFuse](https://ieeexplore.ieee.org/document/8580578)和[DIDFuse](https://www.ijcai.org/proceedings/2020/135)分别对应单编码器和多编码器的融合方法，融合策略均选择在原文中表现优异的加法融合；基于卷积神经网络子类，选择[U2Fusion](https://ieeexplore.ieee.org/document/9151265)、[STDFusionNet]()、[SeAFusion](https://www.sciencedirect.com/science/article/abs/pii/S1566253521002542)和[DeFusion](https://dl.acm.org/doi/abs/10.1007/978-3-031-19797-0_41)分别对应无监督、手工标注、任务驱动和自监督的方法；基于Transformer子类，选择[SwinFusion](https://ieeexplore.ieee.org/document/9812535)和[SwinFuse](https://ieeexplore.ieee.org/document/9832006)分别对应ViT和HVT的方法；基于生成对抗网络的子类，选择[FusionGAN](https://www.sciencedirect.com/science/article/abs/pii/S1566253518301143)和[GANFM](https://ieeexplore.ieee.org/abstract/document/9573457)分别对应单判别器和多判别器的方法；基于扩散模型的子类，选择[Diff-IF](https://www.sciencedirect.com/science/article/abs/pii/S1566253524002288)和[DDFM](https://arxiv.org/abs/2303.06840)分别对应以融合图像为先验和以模态图像为先验的方法。需要说明的是，由于基于变分自编码器的图像融合方法较少且未公开预训练模型，因此对比实验中未包含该类别的算法。
-
-用于验证方法的测试集选择[VTUAV](https://arxiv.org/abs/2204.04120)、[Fireman](https://zenodo.org/records/12773422)、[BOOSS](https://www.mdpi.com/2072-4292/13/21/4357)数据集，对应目标监测、灾情预警和专业巡检三类场景，图像尺寸分别为640×360,640×512和512×512。实验中从这些数据集中各随机选取50对图像进行定量评估。所有的源图像在空间上严格对齐。Fireman数据集中伪彩色红外图像，先经过YCbCr转换保留Y通道，这一操作不影响红外图像中的强度信息。所有可见光图像在融合前转换到YCbCr颜色空间，保留Y通道红外图像进行融合，融合后通过逆变换转为RGB融合结果。
+注：<strong>加粗</strong>表示最优结果，<ins>下划线</ins>表示次优结果
 
 ## 结语
 尽管基于深度学习的可见光和红外图像融合方法取得了一系列成果，但在低空遥感实际应用中仍需要突破在各种非理想条件下的技术难点：1）未精确配准的图像融合；2）干扰环境下的图像融合；3）运动模糊下的图像融合。
