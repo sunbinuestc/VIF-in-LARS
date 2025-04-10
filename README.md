@@ -11,6 +11,7 @@
 
 **专业巡检**：低空飞行器搭载双光载荷，能够提供巡检目标空中视角的双光图像。结合图像融合技术为专业巡检人员提供巡检场景及关键热辐射区域的可视化效果，可以对高层建筑立面、屋顶及热桥等特定区域实施能源审计；对桥梁、路面、堤坝等基础设施进行无损检测；以及对电力线、绝缘子以及核设施等高危设备进行巡检，辅助专业人员发现安全隐患并定位故障，提升巡检效率。
 
+
 <div align=center>表1 低空遥感双光图像数据集</div>
 <table align=center>
   <tr>
@@ -34,15 +35,225 @@
     <td>是</td>
   </tr>
   <tr>
-    <td><a href="https://github.com/VisDrone/Drone-Vehicle">DroneVehicle</a></td>
+    <td><a href="https://github.com/VisDrone/DroneVehicle">DroneVehicle</a></td>
     <td>2022</td>
     <td>天津大学</td>
-    <td>28439</td>
+    <td>28,439</td>
     <td>640×512</td>
     <td>1</td>
     <td>是</td>
   </tr>
-</table>
+  <tr>
+    <td><a href="https://www.nii-cu-multispectral.org/">NII-CU</a></td>
+    <td>2022</td>
+    <td>日本国立情报研究所</td>
+    <td>5,880</td>
+    <td>3840×2160, 640×512</td>
+    <td>1</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="https://sites.google.com/uw.edu/wisard">WiSARD</a></td>
+    <td>2022</td>
+    <td>华盛顿大学</td>
+    <td>15,453</td>
+    <td>512×512</td>
+    <td>1</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://zenodo.org/records/7465521#.Y6Jk0XbMJD8">RGB-LWIR Labeled Dataset</a></td>
+    <td>2022</td>
+    <td>乔治梅森大学</td>
+    <td>12,600</td>
+    <td>1128×896</td>
+    <td>2</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/ahucslf/UAV-VIIR">UAV-VIIR</a></td>
+    <td>2023</td>
+    <td>安徽大学</td>
+    <td>5,560</td>
+    <td>/</td>
+    <td>2</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/fengh96/RTDOD">RTDOD</a></td>
+    <td>2023</td>
+    <td>中国科学院大学</td>
+    <td>16,200</td>
+    <td>1280×720</td>
+    <td>1</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/wgw123wqw/PFTrack/blob/main/videos/VTMOT.mp4">VT-MOT</a></td>
+    <td>2024</td>
+    <td>安徽大学</td>
+    <td>582</td>
+    <td>640×480, 1600×1200</td>
+    <td>视频对</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/XingLongh/GTM-Fuse">HBUT-IV</a></td>
+    <td>2024</td>
+    <td>湖北工业大学</td>
+    <td>50</td>
+    <td>800×600等</td>
+    <td>1</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/mmic-lab/Datasets-and-benchmark-code/tree/main">HIAL</a></td>
+    <td>2024</td>
+    <td>安徽大学</td>
+    <td>150</td>
+    <td>1920×1080</td>
+    <td>视频对</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/VDT-2048/DV-TOD#tab-readme-ov-file">DV-TOD</a></td>
+    <td>2024</td>
+    <td>东北大学</td>
+    <td>2,179</td>
+    <td>1920×1080, 640×512</td>
+    <td>2</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td rowspan="5">灾情预警</td>
+    <td><a href="https://ieee-dataport.org/open-access/flame-dataset-aerial-imagery-pile-burn-detection-using-drones-uavs">FLAME</a></td>
+    <td>2021</td>
+    <td>北亚利桑那大学</td>
+    <td>4万帧以上视频</td>
+    <td>640×512等</td>
+    <td>2</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://www.mdpi.com/2072-4292/15/12/3173">forest fire</a></td>
+    <td>2023</td>
+    <td>北京林业大学</td>
+    <td>6,972</td>
+    <td>512×512</td>
+    <td>1</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td>石坝管涌灾害</td>
+    <td>2023</td>
+    <td>中国应急管理部</td>
+    <td>/</td>
+    <td>640×512</td>
+    <td>2</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="http://complex.ustc.edu.cn/main.htm">RGBT Wildfire</a></td>
+    <td>2023</td>
+    <td>中国科学技术大学</td>
+    <td>1,367</td>
+    <td>420×420, 640×512</td>
+    <td>1</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://zenodo.org/records/12773422">FireMan</a></td>
+    <td>2024</td>
+    <td>奥卢大学</td>
+    <td>1,470</td>
+    <td>958×760</td>
+    <td>2</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td rowspan="10">专业巡检</td>
+    <td><a href="https://datasetsearch.research.google.com/search?src=0&query=powerline%20infrared%20visible&docid=12cvMTFsaj-Jian1LZA%3Dp3D">Powerline Image</a></td>
+    <td>2017</td>
+    <td>阿纳多卢大学</td>
+    <td>4,000</td>
+    <td>128×128</td>
+    <td>1</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://doi.org/10.5281/zenodo.5241286">BOOSS</a></td>
+    <td>2021</td>
+    <td>南加州大学</td>
+    <td>5,193</td>
+    <td>512×512</td>
+    <td>1</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="https://zenodo.org/records/7360996">TBBR</a></td>
+    <td>2022</td>
+    <td>卡尔斯鲁厄理工学院</td>
+    <td>2,848</td>
+    <td>4000×3000, 640×512</td>
+    <td>1</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/parham/lemanchot-analysis">lemanchot-analysis</a></td>
+    <td>2022</td>
+    <td>拉瓦尔大学</td>
+    <td>273</td>
+    <td>640×480</td>
+    <td>2</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/hhuijiang/DSG-BINet">RGB-T TL</a></td>
+    <td>2022</td>
+    <td>河海大学</td>
+    <td>600</td>
+    <td>1920×1080, 640×480</td>
+    <td>2</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td>CVpower</td>
+    <td>2022</td>
+    <td>上海电力大学</td>
+    <td>240</td>
+    <td>240×320</td>
+    <td>2</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td>VITLD</td>
+    <td>2022</td>
+    <td>浦项科技大学</td>
+    <td>400</td>
+    <td>256×256</td>
+    <td>1</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td>BIM</td>
+    <td>2023</td>
+    <td>奥克兰大学</td>
+    <td>34</td>
+    <td>/</td>
+    <td>1</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td>Facade deterioration dataset</td>
+    <td>2024</td>
+    <td>同济大学</td>
+    <td>1,228</td>
+    <td>800×600</td>
+    <td>2</td>
+    <td>是</td>
+  </tr>
+</table>                                                       
+注：图像类型1表示可见光和灰度红外图像，2表示可见光和伪彩色红外图像。表格中无链接数据集均要求按需申请
 
 ## 基于深度学习的图像融合方法分类
 本文聚焦可见光和红外图像融合算法在低空遥感场景下的应用，依据网络架构和建模方式对深度学习方法进行分类，所采用的分类方式可以推广至其它类型的图像融合方法。随着深度学习在视觉任务中的突破性进展，以深度学习为基础的图像融合方法逐渐成为关注的热点。根据数据分布的不同建模方式，基于深度学习的图像融合方法可以分为判别式与生成式两大类。
