@@ -771,12 +771,14 @@
 尽管基于深度学习的可见光和红外图像融合方法取得了一系列成果，但在低空遥感实际应用中仍需要突破在各种非理想条件下的技术难点：1）未精确配准的图像融合；2）干扰环境下的图像融合；3）运动模糊下的图像融合。
 
 基于深度学习的可见光和红外图像融合具有巨大的应用潜力，以下未来研究方向将进一步推动图像融合方法的探索，并加速其在低空遥感场景中的落地应用：1）高效实时的图像融合；2）统一全面的客观评价；3）任务协同的图像融合。
-## 代码使用方法
+## 指标筛选方法
 见[metric calculation](https://github.com/sunbinuestc/VIF-metrics-analysis/tree/fec9d88fe85de35246e82eb0d4dc95c535b9d0f4/code/Python/metric%20calculation)
 
-## 引用信息
+## 引用
 孙彬, 游航, 李文博, 刘祥瑞, 马佳义. 双光载荷图像融合及其在低空遥感中的应用[J/OL]. 航空学报, 1-23[2025-04-09]. http://kns.cnki.net/kcms/detail/11.1929.V.20241227.1548.002.html.
 
 Bin Sun, Hang You, Wenbo Li, Xiangrui Liu, Jiayi Ma. Dual-band payload image fusion and its application in low-altitude remote sensing[J/OL]. Acta Aeronautica et Astronautica Sinica, 1-23[2025-04-09]. http://kns.cnki.net/kcms/detail/11.1929.V.20241227.1548.002.html.
+
+航空学报官方链接[双光载荷图像融合及其在低空遥感中的应用](https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2024.31343)
 
 在项目中，我们引用了一些网络中开源的客观指标计算代码，在此感谢提供这些代码的开发者！
