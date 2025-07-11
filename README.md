@@ -778,10 +778,12 @@
 见[metric calculation](https://github.com/sunbinuestc/VIF-metrics-analysis/tree/fec9d88fe85de35246e82eb0d4dc95c535b9d0f4/code/Python/metric%20calculation)
 
 ## 引用
-孙彬, 游航, 李文博, 刘祥瑞, 马佳义. 双光载荷图像融合及其在低空遥感中的应用[J/OL]. 航空学报, 1-23[2025-04-09]. http://kns.cnki.net/kcms/detail/11.1929.V.20241227.1548.002.html.
+孙彬, 游航, 李文博, 刘祥瑞, 马佳义. 双光载荷图像融合及其在低空遥感中的应用[J]. 航空学报, 2025, 46(11): 531343.
 
-Bin Sun, Hang You, Wenbo Li, Xiangrui Liu, Jiayi Ma. Dual-band payload image fusion and its application in low-altitude remote sensing[J/OL]. Acta Aeronautica et Astronautica Sinica, 1-23[2025-04-09]. http://kns.cnki.net/kcms/detail/11.1929.V.20241227.1548.002.html.
+Bin SUN, Hang YOU, Wenbo LI, Xiangrui LIU, Jiayi MA. Dual-band payload image fusion and its applications in low-altitude remote sensing[J]. Acta Aeronautica et Astronautica Sinica, 2025, 46(11): 531343.
 
-航空学报官方链接[双光载荷图像融合及其在低空遥感中的应用](https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2024.31343)
+中国知网链接：https://kns.cnki.net/kcms/Detail/Detail.aspx?doi=11.1929.V.20241227.1548.002
+
+航空学报官方链接：https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2024.31343
 
 在项目中，我们引用了一些网络中开源的客观指标计算代码，在此感谢提供这些代码的开发者！
